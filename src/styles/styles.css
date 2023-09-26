@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+header {
+    background: #03a9fa;
+    text-align: center;
+}
+
+.logo {
+    color: aliceblue;
+    font-size: 24px;
+}
+
+input{
+    font-size: 16px;
+    margin: 20px 0px;
+}
