@@ -21,6 +21,16 @@ footer{
     margin-top: 20px;
     padding: 20px 0;
     text-align: center;
-    background-color: #1614b6;
+    background-color: #bcbcc0;
     color: rgb(252, 246, 239);
+}
+.newslist{
+background-color: #f0f0f1;
+margin: 10px;
+padding: 1px 12px 20px ;
+
+}
+
+.newsheader{
+margin: 30px 30px;
 }

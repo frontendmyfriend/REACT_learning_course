@@ -13,17 +13,37 @@ class App extends Component {
 
     state = {
         news: JSON,
-        footerText: 'Footer with a lot of stuff in there'
+        footerText: 'Footer with a lot of stuff in there',
+        active:false
     }
+
+    getKeywords = (e) => {
+        console.log(e.target.value);
+    }  
+        
+    changeColor = () => {
+        this.setState({
+            active: this.state.active ? false : true
+        })
+    }
+
+
 
     render () {
         // console.log(this.state);
         return (
             <div className='hey'>
-                <Header/>
-                <NewsList
-                    news={this.state.news}
+                <Header
+                    active={this.active}
+                    changeColor={this.changeColor}
+                    keyword={this.getKeywords}
                 />
+
+                <NewsList 
+                    news={this.state.news}
+                >
+                    <h1 className='newsheader'>Child of Component "News"</h1>
+                    </NewsList>
                 <Footer footerText={this.state.footerText} />
             </div>
     )

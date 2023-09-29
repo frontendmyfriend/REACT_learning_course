@@ -5,22 +5,25 @@ import React, {Component} from 'react';
 
 class Header extends Component{
 
-    state = {
-        keywords: ''
-    }
 
-    inputChange = (e) => {
-        this.setState({
-            keywords: e.target.value,
-        })
-    }
+    // inputChange = (e) => {
+    //     const value = e.target.value === '' ? false : true;
+    //     this.setState({
+    //         active: value,
+    //         keywords: e.target.value,
+            
+    //     })
+    // }
+
+    
 
     render () {
         return (
                 <>
-                    <header> 
+                <header style={{background:`${this.props.active ? '#03d9ff' : '#03a9fa'}`}}>  
                         <div className='logo' >News</div>
-                        <input onChange = {this.inputChange} />
+                    <input onChange={this.props.keyword} />
+                    <button onClick={()=>this.props.changeColor}>Change backround color</button>
                     </header>
                 </>
         )    

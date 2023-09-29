@@ -1,6 +1,6 @@
 const NewsListItem = ({item}) => {
     return (
-        <div>
+        <div className="newslist">
             <h3><strong>{item.title}</strong> </h3>
             <div>{item.feed} </div>
         </div>
